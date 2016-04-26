@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Navigator, Page, Button, Toolbar, BackButton} from 'react-onsenui';
-
-import ons from 'onsenui';
 
 class MainPage extends React.Component {
   pushPage() {
@@ -50,8 +47,8 @@ class SecondPage extends React.Component {
   }
 }
 
-class App extends React.Component {
-  renderPage(route, navigator) {
+export default class extends React.Component {
+  renderScene(route, navigator) {
     const props = route.props || {};
     props.navigator = navigator;
 
@@ -62,10 +59,8 @@ class App extends React.Component {
     return (
       <Navigator
         initialRoute={{component: MainPage}}
-        renderPage={this.renderPage}
+        renderScene={this.renderScene}
       />
     );
   }
 }
-
-ons.ready(() => ReactDOM.render(<App />, document.getElementById('app')));
