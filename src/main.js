@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Navigator, Page, Button, Toolbar, BackButton} from 'react-onsenui';
 
-import ons from 'onsenui';
+// load Onsen UI library
+import 'onsenui';
 
 class MainPage extends React.Component {
   pushPage() {
@@ -68,4 +69,4 @@ class App extends React.Component {
   }
 }
 
-ons.ready(() => ReactDOM.render(<App />, document.getElementById('app')));
+ReactDOM.render(<App />, document.getElementById('app'));
