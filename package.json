@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "onsenui": "^2.0.0-rc.4",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
-    "react-onsenui": "0.2.1"
+    "onsenui": "^2.0.0-rc.5",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-onsenui": "0.2.8"
   }
 }
