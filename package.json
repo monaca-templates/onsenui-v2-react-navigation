@@ -6,6 +6,6 @@
     "onsenui": "^2.0.0-rc.5",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
-    "react-onsenui": "0.2.8"
+    "react-onsenui": "*"
   }
 }
