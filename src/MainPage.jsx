@@ -19,7 +19,7 @@ export default class MainPage extends React.Component {
 
   render() {
     return (
-      <Page>
+      <Page renderToolbar={this.renderToolbar}>
         <p style={{textAlign: 'center'}}>
           <Button onClick={this.pushPage.bind(this)}>Push page</Button>
         </p>
