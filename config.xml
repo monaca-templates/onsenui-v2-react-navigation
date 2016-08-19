@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="com.example.helloworld" version="1.0.0">
-  <name>Onsen UI Tabbar</name>
+  <name>Onsen UI v2 React Navigation</name>
   <description></description>
   <author></author>
   <access origin="*"/>
