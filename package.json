@@ -1,6 +1,6 @@
 {
   "name": "onsenui-v2-react-navigation",
-  "version": "2.2.2+20170302.1",
+  "version": "2.2.6+20170313.1",
   "description": "",
   "dependencies": {
     "onsenui": "2.1.0",
