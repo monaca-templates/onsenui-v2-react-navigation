@@ -17,7 +17,7 @@
       "cordova-custom-config": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-whitelist": {},
-      "mobi.monaca.plugins.Monaca": {}
+      "monaca-plugin-monaca-core": {}
     }
   }
 }
