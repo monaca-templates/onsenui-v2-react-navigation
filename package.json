@@ -1,6 +1,6 @@
 {
   "name": "onsenui-v2-react-navigation",
-  "version": "2.4.0+20171206.1",
+  "version": "2.4.0+20180131.1",
   "description": "",
   "dependencies": {
     "cordova-custom-config": "5.0.2",
