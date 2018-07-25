@@ -13,7 +13,7 @@
     "react-onsenui": "^1.11.1"
   },
   "scripts": {
-    "monaca:preview": "webpack-serve --open & webpack --watch --mode production",
+    "monaca:preview": "npm run dev & npm run watch",
     "monaca:transpile": "npm run build",
     "monaca:debug": "npm run watch",
     "dev": "webpack-serve --open",
