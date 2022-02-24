@@ -1,10 +1,9 @@
 {
   "name": "onsenui-v2-react-navigation",
-  "version": "4.5.0",
+  "version": "5.0.0",
   "description": "",
   "dependencies": {
     "cordova-plugin-splashscreen": "6.0.0",
-    "cordova-plugin-whitelist": "1.3.5",
     "monaca-plugin-monaca-core": "3.3.1",
     "onsenui": "2.11.2",
     "react": "^16.8.6",
@@ -22,7 +21,6 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-whitelist": {},
       "monaca-plugin-monaca-core": {}
     }
   },
@@ -31,7 +29,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "cordova": "^10.0.0",
+    "cordova": "^11.0.0",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.1",
     "file-loader": "^1.1.11",
