@@ -66,15 +66,10 @@ let webpackConfig = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?\S*)?$/,
-        use: [
-          {
-              loader: 'file-loader',
-              options: {
-                  limit: 1000,
-                  name : 'assets/img/[name].[ext]'
-              }
-          }
-      ]
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[hash].[ext]'
+        }
       },
       {
         test: /\.css$/,
