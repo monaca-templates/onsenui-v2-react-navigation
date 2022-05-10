@@ -4,10 +4,13 @@ import {Navigator} from 'react-onsenui';
 
 import MainPage from './MainPage'
 
+let keyIndex = 0;
+
 export default class App extends React.Component {
   renderPage(route, navigator) {
     const props = route.props || {};
     props.navigator = navigator;
+    props.key = keyIndex++;
 
     return React.createElement(route.component, props);
   }
