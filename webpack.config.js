@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -32,7 +31,7 @@ let webpackConfig = {
     removeEmptyChunks: true,
     providedExports: true
   },
-  
+
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css', '.html', '.styl'],
     modules: [
@@ -52,7 +51,7 @@ let webpackConfig = {
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
             plugins: devMode ? ['react-hot-loader/babel'] : []
-          } 
+          }
         }]
       },
       {
@@ -73,15 +72,14 @@ let webpackConfig = {
       },
       {
         test: /\.css$/,
-        use: [          
+        use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
+          'css-loader'
         ]
       }
     ]
   },
-  
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -89,18 +87,18 @@ let webpackConfig = {
     }),
     new ProgressBarPlugin(),
   ],
- 
+
   resolveLoader: {
-    modules: [ 'node_modules' ]
+    modules: ['node_modules']
   },
- 
+
   performance: {
     hints: false
   }
 };
 
 // Development mode
-if(devMode) {
+if (devMode) {
 
   webpackConfig.devtool = 'eval';
 
@@ -113,33 +111,24 @@ if(devMode) {
     },
     devMiddleware: {
       publicPath: '/',
-      stats: {
-        colors: true,
-        errorDetails: true,
-        performance: true,
-        source: true,
-        warnings: true,
-        builtAt: true,
-      }
+      stats: true
     }
   }
 
   let devPlugins = [
     new HtmlWebPackPlugin({
-      template: 'src/public/index.html.ejs',
-      chunksSortMode: 'auto'
+      template: 'src/public/index.html.ejs'
     })
   ];
-  
+
   webpackConfig.plugins = webpackConfig.plugins.concat(devPlugins);
-  
+
 } else {
-  
+
   // Production mode
   let prodPlugins = [
     new HtmlWebPackPlugin({
       template: 'src/public/index.html.ejs',
-      chunksSortMode: 'auto',
       externalCSS: ['components/loader.css'],
       externalJS: ['components/loader.js'],
       minify: {
@@ -151,7 +140,7 @@ if(devMode) {
       }
     })
   ];
-  webpackConfig.plugins = webpackConfig.plugins.concat( prodPlugins );
+  webpackConfig.plugins = webpackConfig.plugins.concat(prodPlugins);
 
 }
 
