@@ -130,7 +130,7 @@ if (devMode) {
     new HtmlWebPackPlugin({
       template: 'src/public/index.html.ejs',
       externalCSS: ['components/loader.css'],
-      externalJS: ['components/loader.js'],
+      externalJS: ['cordova.js', 'components/loader.js'],
       minify: {
         caseSensitive: true,
         collapseWhitespace: true,
